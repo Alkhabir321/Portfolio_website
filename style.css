@@ -1,0 +1,188 @@
+/* =====================
+   GENERAL STYLING
+===================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: url('images/wow.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* overlay for readability */
+  z-index: -1;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #2563eb;
+}
+
+/* =====================
+   SECTIONS CARD DESIGN
+===================== */
+section {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Card styling for About, Skills, Projects, Contact */
+.card {
+  background: rgba(30, 41, 59, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  min-width: 280px;
+  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* Headings inside cards */
+.card h2, .card h3 {
+  margin-top: 0;
+}
+
+/* =====================
+   SKILLS LIST
+===================== */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+ul li {
+  background: rgba(59, 130, 246, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+ul li:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+
+/* =====================
+   PROJECT CARDS
+===================== */
+.project {
+  background: rgba(59, 130, 246, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* =====================
+   CONTACT SECTION
+===================== */
+#contact p {
+  font-size: 18px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+/* BIG SECTION BACKGROUND & PADDING */
+.big-section {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.8); /* semi-transparent overlay for separation */
+  position: relative;
+}
+
+/* Inner section holds the smaller card(s) */
+.inner-section {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
